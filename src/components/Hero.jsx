@@ -7,7 +7,7 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex flex-col justify-center items-center text-center px-4 bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('public/bg.jpg')",
+        backgroundImage: "url('/bg.jpg')",
       }}
     >
       {/* Optional overlay for better text visibility */}
