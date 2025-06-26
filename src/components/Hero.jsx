@@ -5,21 +5,14 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center items-center text-center px-4 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: "url('public/bg.jpg')",
+      }}
     >
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0 brightness-75"
-      >
-        <source src="/bg-video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {/* Optional overlay for better text visibility */}
+      <div className="absolute inset-0 bg-black/40 dark:bg-black/60"></div>
 
-      {/* Overlay Content */}
       <div className="relative z-10">
         <motion.h1
           className="text-4xl md:text-6xl font-bold mb-4 text-white"
@@ -31,7 +24,7 @@ const Hero = () => {
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl text-gray-100 max-w-xl mb-6"
+          className="text-lg md:text-xl text-gray-200 max-w-xl mb-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
@@ -53,7 +46,7 @@ const Hero = () => {
           </a>
           <a
             href="#contact"
-            className="border border-white text-white px-6 py-2 rounded-full hover:bg-white hover:text-purple-600 transition"
+            className="border border-purple-300 text-purple-300 px-6 py-2 rounded-full hover:bg-purple-600 hover:text-white transition"
           >
             Contact Me
           </a>
